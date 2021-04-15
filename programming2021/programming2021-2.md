@@ -91,6 +91,9 @@ Preferences: Open Settings (JSON)
 - Edit CSV (CSVが編集できる)
 - Markdown All in One (マークダウン便利ツール集)
 - markdownlint (Markdownの構文チェッカー)
+- Markdown PDF (MarkdownファイルをPDFやHTMLに変換)
+
+マークダウン系のエクステンションは(文字通り)無数に存在しますので、必ずしも上記のもので無くて良いですし、より良いものがあるかもしれません。ぜひ自分に合うエクステンションを探してみてください。
 
 以下は授業では使いませんが、AWSなどの外部サーバーで開発を行う際に大変重宝します。リモートのファイルを直接VS Codeで編集できます。
 
