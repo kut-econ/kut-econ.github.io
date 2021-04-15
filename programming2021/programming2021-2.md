@@ -95,8 +95,8 @@ proxy_servers: {}
 ```
 
 上記のようにproxy_serversの項目が空欄になっていたら、プロキシが設定されていません。その場合は、以下のように順次入力してhttpとhttpsの両方にnocのプロキシサーバーを設定しましょう。
-```
 
+```
 (base) C:\Users\hoge>conda config --set proxy_servers.http http://proxy-server-addr:????
 (base) C:\Users\hoge>conda config --set proxy_servers.https http://proxy-server-addr:????
 ```
