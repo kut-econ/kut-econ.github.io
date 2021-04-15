@@ -1,12 +1,18 @@
 # 第2回 VS Code/仮想環境入門
 
-## VS Code 必須ショートカット
+## VS Code ショートカット
 
-VS Codeを使うに当たって、必ず覚えたほうが良いショートカットが3つあります。
+VS Codeを使うに当たって、覚えたほうが良いショートカットが3つあります。
 
 + **Ctrl+Shift+P**: コマンドパレットを開きます。VS Codeの諸々の操作は、このコマンドパレットに望みの操作に関連するキーワードを入力し、出てきた操作リストの中から望みの操作を選択するという形で行います。
 + **Ctrl+Shift+X**: 拡張機能検索ウィンドウとインストール済み拡張機能の一覧を表示します。邪魔な拡張機能を無効にしたり、新しい拡張機能を探してインストールするのに使います。
 + **Ctrl+,**: 設定項目検索ウィンドウを開きます。注)設定ファイルを直接編集するときは、コマンドパレットにsettings.jsonと入力してください。
+
+その他、覚えると快適なショートカットに、
+
++ **Ctrl+PgUp**, **Ctrl+PgDn**: タブを切り替えます。
+
+などがあります。他にも無数のショートカットがありますので、探してみてください。
 
 ## VS Codeの設定
 
@@ -66,16 +72,23 @@ Preferences: Open Settings (JSON)
 + Japanese Language Pack for VS Code (VS Codeを日本語化)
 + Python (これがないと論外)
 + Awesome Emacs Keymap (Emacsキーバインディング)
-+ Pylance (Intellisenseがうまく機能しない場合)
++ Pylance (Intellisenseがうまく機能しない場合、試す価値あり)
 + Path Intellisense (ファイル名パス補完)
 + R (Rが実行できるようになります)
 + R Tools (R用のIntellisense)
 + Rainbow CSV (CSVファイルが見やすくなります)
 + Edit CSV (CSVが編集できる)
++ markdownlint (Markdownの構文チェッカー)
 
-以下は授業では使わないけど、大変便利です。
+以下は授業では使いませんが、AWSなどの外部サーバーで開発を行う際に大変重宝します。リモートのファイルを直接VS Codeで編集できます。
 
 + Remote - SSH (外部サーバー等にSSH接続できる)
+
+## その他 VS Codeの便利な使い方
+
+### Zenモード
+
+コマンドパレットにzenと入力してZenモードを起動すると、エディター部分が全面表示になり、画面を有効に使えます。Escを押すとZenモードを終了します。
 
 ## Anacondaの設定
 
@@ -125,7 +138,3 @@ Pythonでは、用途に合わせて仮想環境を作るのが定石です。�
 + otree3 : otree(ver.3)のための仮想環境
 
 まずはAnaconda promptを起動して、既存の仮想環境を確認しておきます。
-
-```
-
-```
