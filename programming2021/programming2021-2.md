@@ -175,7 +175,7 @@ base                  *  E:\ProgramData\Anaconda3
 最初は仮想環境がbaseしか存在しないので、#のある行を除けば1行しか出力されません。アスタリスク(*)は、現在自分のいる仮想環境がbaseであることを示しており、そのあとのパスはbaseがインストールされているディレクトリを表しています。全く同じ出力は、次のようにしても得られます。
 
 ```
-(base) C:\Users\Kobayashi>conda info --envs
+(base) C:\Users\hoge>conda info --envs
 # conda environments:
 #
 base                  *  E:\ProgramData\Anaconda3
@@ -184,7 +184,7 @@ base                  *  E:\ProgramData\Anaconda3
 次に、baseにはどれだけのパッケージがインストールされているのか調べてみましょう。
 
 ```
-(base) C:\Users\Kobayashi>conda list
+(base) C:\Users\hoge>conda list
 # packages in environment at E:\ProgramData\Anaconda3:
 #
 # Name                    Version                   Build  Channel
