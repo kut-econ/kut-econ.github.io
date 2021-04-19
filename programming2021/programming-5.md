@@ -88,7 +88,7 @@ TypeError: 'str' object does not support item assignment
 次のように長さ5のリストを作成してxに代入すると何が起きるか考えてみましょう。
 
 ```python
-x = [1,2,3,4,5]
+x = [120,-3,'Py','thon','foo']
 ```
 
 ![list structure](img/list_structure.drawio.png)
