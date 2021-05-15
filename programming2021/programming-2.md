@@ -15,6 +15,7 @@
   - [Anaconda仮想環境](#anaconda仮想環境)
   - [仮想環境の状態チェック](#仮想環境の状態チェック)
   - [仮想環境の構築](#仮想環境の構築)
+  - [VS Codeで特定の仮想環境を使う](#vs-codeで特定の仮想環境を使う)
   - [VS Code以外のエディター(参考)](#vs-code以外のエディター参考)
     - [Emacs](#emacs)
     - [vi/vim](#vivim)
@@ -203,7 +204,7 @@ my_first_code.pyの上で、上の表に上げたキーバインドを一つず�
 
 ## マークダウン入門
 
-次に、簡単なマークダウンファイルを作成してみましょう。マークダウンとは、HTMLのようなマークアップ言語の一種で、プレーンテキスト文書に書式を付けて文書を整形するための言語です。ホームページを記述するためのHTML(HyperText Markup Language)については皆さんご存知かとおもいますが、Markdownは、HTMLよりももっと機能を限定して簡略化したようなものです。
+次に、簡単なマークダウンファイルを作成してみましょう。マークダウンとは、HTMLのようなマークアップ言語の一種で、プレーンテキスト文書に書式を付けて文書を整形するための言語です。ホームページを記述するためのHTML(HyperText Markup Language)については皆さんご存知かとおもいますが、Markdownは、HTMLよりももっと機能を限定して簡略化したようなものです。(ちなみに本講義資料も全てマークダウンで記述しました。)
 
 HTMLでは、たとえば見出しや段落を作るとき、次のようなテキスト文書をつくります。
 
@@ -592,31 +593,44 @@ conda deactivate
 
 と入力します。
 
-最後に環境を削除するときは、次のようにします。
-
-```anaconda
-conda remove -n myenv --all
-```
-
 最後にcondaコマンドをまとめておきましょう。
 
 |コマンド|動作|
 |--|--|
-|conda --help|condaコマンドのヘルプを表示|
-|conda command --help|コマンドcommandのヘルプを表示|
-|conda config --show|全てのパラメータを表示|
-|conda config --show par|パラメータparの設定を表示|
-|conda config --set par value|パラメータparの値をvalueに設定|
-|conda config --remove-key par|パラメータparの設定を消去|
-|conda info --envs|全ての仮想環境を表示|
-|conda info -e|同上|
-|conda env list|同上|
-|conda create -n env_name|仮想環境env_nameを作成|
-|conda list|現環境のインストール済みパッケージをリストアップ|
-|conda install package|パッケージpackageを現在環境にインストール|
-|conda install package=ver|パッケージpackageのバージョンverを現環境にインストール|
-|conda remove package|パッケージpackageを現環境からアンインストール|
-|conda remove -n env_name --all|仮想環境env_nameを削除|
+|`conda --help`|condaコマンドのヘルプを表示|
+|`conda command --help`|コマンドcommandのヘルプを表示|
+|`conda config --show`|全てのパラメータを表示|
+|`conda config --show par`|パラメータparの設定を表示|
+|`conda config --set par value`|パラメータparの値をvalueに設定|
+|`conda config --remove-key par`|パラメータparの設定を消去|
+|`conda info --envs`|全ての仮想環境を表示|
+|`conda info -e`|同上|
+|`conda env list`|同上|
+|`conda create -n env_name`|仮想環境env_nameを作成|
+|`conda list`|現環境のインストール済みパッケージをリストアップ|
+|`conda install package`|パッケージpackageを現在環境にインストール|
+|`conda install package=ver`|パッケージpackageのバージョンverを現環境にインストール|
+|`conda remove package`|パッケージpackageを現環境からアンインストール|
+|`conda remove -n env_name --all`|仮想環境env_nameを削除|
+
+## VS Codeで特定の仮想環境を使う
+
+新しく作成した仮想環境myenvをVS Codeで呼び出すためには、その仮想環境にipykernelパッケージをインストールする必要があります。
+
+```anaconda
+conda activate myenv
+conda install ipykernel
+```
+
+次にVS Codeを起動し、my_first_code.pyを開きましょう。この状態で**Ctrl-Shift-P**をたたいてコマンドパレットを呼び出し、**select**と入力します。幾つか候補が出てきますが、その中から**Python: Select Interpreter**を選びます。すると、仮想環境のリストが表示されるので、正しい仮想環境を選びましょう。myenvがリストにない場合は、パレットにmyenvと入力するとリストに現れます。
+
+新環境myenvを選ぶと、VS Codeの画面下にある青い帯のところに、'myenv':condaと表示されます。
+
+![myenv](img/myenv.png)
+
+これで、インターラクティブモードで実行したPythonコードはすべて仮想環境myenvにインストールしたインタープリタによって実行されます。
+
+仮想環境をbaseに戻したいときは、同じようにコマンドパレットからbaseを呼び出しましょう。
 
 ## VS Code以外のエディター(参考)
 
@@ -654,10 +668,11 @@ VS Code以外にもエディターはたくさんありますが、代表的な�
 1. 本講義でリストアップしたVS Codeのエクステンションのうち、授業中にインストールできなかったものをインストールしておきなさい。
 2. 自分のパソコンもしくは研究室のパソコンにもVS Codeをインストールし、必要な設定(研究室の場合はプロキシ等)を行うとともに、重要なエクステンションを全てインストールしなさい。
 3. CSV関連のエクステンションをインストールし、CSVファイルがVS Codeで表示・編集できることを確かめなさい。
-4. 研究室のパソコンでAnacondaを使っている人は、proxyの設定が正しいかチェックしなさい。間違っている場合は、正しく設定しなおしてください。
-5. condaコマンドで環境構築の際、同時に特定のバージョンのpythonもインストールする方法を調べなさい。また、実際にそれを試してみなさい。
-6. 新しく作った仮想環境にnumpyパッケージをインストールしてみなさい。また削除してみなさい。
-7. LinuxやMacOSを使っている人は、Emacsとviを使ってみなさい。しばらく使ってみて、なぜviが根強い人気を誇っているのか考えてみなさい。
+4. 本講義資料で随所に現れるコード断片に注意しなさい。このようなコード断片をマークダウンに挿入する方法をインターネットで調べて実際に試してみなさい。
+5. 研究室のパソコンでAnacondaを使っている人は、proxyの設定が正しいかチェックしなさい。間違っている場合は、正しく設定しなおしてください。
+6. condaコマンドで環境構築の際、同時に特定のバージョンのpythonもインストールする方法を調べなさい。また、実際にそれを試してみなさい。
+7. 新しく作った仮想環境にnumpyパッケージをインストールしてみなさい。また削除してみなさい。
+8. LinuxやMacOSを使っている人は、Emacsとviを使ってみなさい。しばらく使ってみて、なぜviが根強い人気を誇っているのか考えてみなさい。
 
 ## 課題(アサインメント)
 
