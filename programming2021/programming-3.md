@@ -201,13 +201,168 @@ Windowsエクスプローラによって閲覧できる作業ディレクトリ�
 
 ## 変更のステージング
 
-それでは、作業エリア内のファイルを修正して、ステージングエリアに入れてみましょう。現在皆さんは、ローカル課題リポジトリの作業ディレクトリの中でVS Codeを起動ている状態にあるかと思います。assignment-text-0.mdを開いて、若干の修正を加えます。
+それでは、作業エリア内のファイルを修正して、ステージングエリアに入れてみましょう。現在皆さんは、ローカル課題リポジトリの作業ディレクトリの中でVS Codeを起動ている状態にあるかと思います。assignment-0-code.pyを開いて、若干の修正を加えます。
+
+![assignment-0-code-py](img/assignment-0-code-py.png)
+
+これは変数xに1を代入してその値を画面に出力するだけのコードです。x=1の下にy=2という行を挿入してみましょう。
+
+![assignment-0-code-py-modified](img/assignment-0-code-py-modified.png)
+
+すると、画面左のサイドバーにある三つ目のボタンが変化して、1というマークがつきます。これは、変更箇所が1箇所存在するということを表します。
+
+![diff-button](img/diff-button.png)
+
+このボタンをクリックしましょう。すると、エクスプローラに変更のあったファイルの一覧が表示されますので、assignment-0-code.pyを選択します。すると、ウィンドウが二つに分かれて、変更前と変更後を比較する画面になります。このように、リポジトリの管理下にある作業ディレクトリでファイルを変更すると、どこに変化があったのかいつもチェックすることができます。
+
+![diff](img/diff.png)
+
+それでは、この変更をステージングエリアに登録しましょう。bashコンソールで次のように入力してみてください。
+
+```bash
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   assignment-0-code.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+"Changes not staged for commit"と表示されていますが、これは、「まだステージングされていない変更」という意味です。modified:の行には、変更があったファイル名(assignment-0-code.py)が表示されます。
+
+ステージングするファイルは個別に選択することもできますが、ここでは変更の有ったファイルを全てステージングすることにしましょう。そのためには、次のように入力します。
+
+```bash
+git add -A
+```
+
+これでステージング完了です。ためしにgit statusしてみましょう。
+
+```bash
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   assignment-0-code.py
+```
+
+上記のように表示が"Changes to be comitted"に変わっています。これは、「ステージングされたけど、まだコミットされていない変更」という意味です。
+
+この時点で、assignment-0-code.pyの変更は、作業ディレクトリからステージングエリアに入れられました。この状態では、まだ変更はリポジトリに記録されていません。記録する変更の候補としてノミネートされただけです。ステージングエリアに入れられた変更をリポジトリに記録するには、コミットという作業によって変更をコミット履歴に登録する必要があります。
+
+ステージングエリアに入ったがまだコミットされていない変更は次のようにリセット(アンステージ)することができます。
+
+```bash
+$ git reset
+Unstaged changes after reset:
+M       assignment-0-code.py
+```
+
+ためしにgit statusして、状態がもとに戻っていることを確認してください。確認をおえたら、もう一度git add -Aによりステージングしておきましょう。
 
 ## 変更のコミット
 
+ステージングエリアに入れた変更をリポジトリに記録するには、コミットする必要があります。コミットには、常に1行以上のメッセージを付ける必要があります。1行だけのメッセージをつけるときは、次のようにします。
+
+```bash
+$ git commit -m "My first commit"
+[master c70dbc9] My first commit
+ 1 file changed, 1 insertion(+)
+```
+
+ここで"My first commit"がメッセージです。メッセージは、後からコミット履歴を調べたときに、個々のコミットが何のためのコミットであったか分かりやすくするためのものです。
+
+では状態がどのように変化したか、git statusで調べてみましょう。
+
+```bash
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+"nothing to commit"、つまり、コミットすべきものはもう何もない、と表示されています。これにより、ステージングエリア、コミット履歴が全て最新の状態、すなわち作業スペースと同じ状態になったことが分かります。
+
+コミットを取り消してコミット前(ステージングした状態)に戻すには、次のようにします。
+
+```bash
+$ git reset --soft HEAD^
+Unstaged changes after reset:
+M       assignment-0-code.py
+```
+
+ここで"--soft"は、「コミット履歴だけ戻すけど、ステージングエリアまでは元にもどさない」という意味です。HEAD^は大雑把に言うと「現在地点より一つ前」という意味です。ステージングエリアも元に戻したい場合はさらにgit resetすれば良いでしょう。
+
+それではせっかくもとに戻したので、別の方法でコミットしてみます。メッセージなしでgit commitしてみてください。
+
+```bash
+git commit
+```
+
+すると、VS Codeが起動して、コミットメッセージの入力を求められます。この状態では、複数行のメッセージをつけることができます。
+
+![commit-message](img/commit-message.png)
+
+その際、最初の1行にはシンプルなメッセージを書き、1行あけてより詳しいメッセージを書くようにしてください。
+
+![commit-code](img/commit-code.png)
+
+メッセージを書き終わったら、保存してVS Codeを終了すると、bashに戻ります。git statusしてコミット履歴とステージングエリアがともに最新になっているか確かめておいてください。
+
 ## リモートをローカルに同期(プッシュ)
 
+リポジトリの変更をコミットしたら、次はこれをリモートリポジトリにアップロードして課題提出完了となります。この作業を**プッシュ**といいます。言い変えると、リモートの状態をローカルに同期させる作業ということになります。
+
+プッシュする前に、次のコマンドを実行しておくと便利です。
+
+```bash
+$ git branch --set-upstream-to=origin/master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+```
+
+このコマンドを正確に説明するのは難しいですが、ごく大雑把にいうとoriginはリモートリポジトリを、masterはリモートの最新のコミットを表します。上記のコマンドは、(大雑把に言うと)「このリポジトリは、リモートリポジトリoriginのmasterと繋げてくださいね」といった意味合いになります。ちょっと不正確ですが、正しく説明しようとすると**ブランチ**の概念が必要になってきます(本講義ではブランチを詳しく説明することはしません)。
+
+プッシュは次のコマンドでおこないます。
+
+```bash
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 379 bytes | 379.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/kut-econ/assignment-pr21-0-yamada-taro.git
+   cb907d6..16ae7e9  master -> master
+```
+
+なお"--set-upstream-to"の設定を行わなかった場合は、代わりに
+
+```bash
+git push origin master
+```
+
+と入力する必要があります。プッシュの際にパスワードを尋ねられた場合は、GitHubのパスワードを入力してください。
+
+上記で、originはリモートリポジトリを表します。masterはリモートリポジトリの最新のコミットを表します。"git push origin master"は、リモートリポジトリ(origin)に保存されている最新のコミット(master)に、ローカルリポジトリの最新版をプッシュして上乗せ更新せよ、という意味になります。
+
+プッシュが完了すれば、課題提出成功となります。ちゃんとプッシュできたか確認するには、GitHubのサイトで確認するのが最も確実です。全ての課題リポジトリが保存されている[KUT Econ Programming Course](https://github.com/kut-econ)のサイトにアクセスして、目当ての課題リポジトリ名を見つけましょう。課題リポジトリ名をクリックすると、リモートの中身を閲覧できますので、ちゃんとプッシュが成功しているか確かめておいてください。
+
 ## ローカルをリモートに同期(プル)
+
+2台以上のパソコン(たとえば家と大学など)で同じ課題を行う場合、両方のパソコンで同じリモートリポジトリをクローンし、2台の作業を同期させたい場合があります。そのためには、プッシュするだけではなく、ローカルの状態をリモートの状態に同期させる逆の作業が必要になります。これをプルといいます。
+
+![pull](img/pull.drawio.png)
+
+プルは非常に簡単です。
+
+```bash
+git fetch
+git pull
+```
+
+これだけです。fetchはリモートの状態を確かめるコマンドです。もしリモートのほうが新しければ、git pullによってローカルをリモートに同期させることができます。
 
 ## 変更のリセット(変更を無かったことにする)
 
