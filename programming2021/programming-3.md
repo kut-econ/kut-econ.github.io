@@ -112,8 +112,6 @@ git clone repository_url
 
 repository_urlはリモートリポジトリのurlです。このurlが分からなくなったときは、GitHub上で確認することができます。
 
-
-
 ## ローカル課題レポジトリの編集
 
 ## 変更のステージング
