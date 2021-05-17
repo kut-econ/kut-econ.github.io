@@ -222,7 +222,11 @@ git clone https://github.com/kut-econ/assignment-pr21-0-yamada-taro.git
 git clone repository_url
 ```
 
-repository_urlはリモートリポジトリのurlです。このurlが分からなくなったときは、Github上で確認することができます。
+repository_urlはリモートリポジトリのurlです。このurlは、自分のリモート課題リポジトリにインターネットブラウザでアクセスすることにより調べることができます。[KUT Econ Programming Course](https://github.com/kut-econ)のサイトで自分のリモート課題リポジトリのリンクを見つけ、クリックしてください。以下のようにリポジトリの内容が表示されます。
+
+![remote_repo](img/remote-repo.png)
+
+右上の緑色の"Code"というボタンから、クローンのためのリポジトリのurlをコピーできます。(sshではなく、httpsリンクを選んでください。)
 
 ## ローカル課題リポジトリの編集
 
@@ -488,3 +492,7 @@ Gitには便利なコマンドが無数に存在しますので、インター�
 6. Gitの「ブランチ」について調べなさい。それはどのようなものか？
 
 ## 課題(アサインメント)
+
+1. 課題0のassignment-0-text.mdをVS Codeで開き、学籍番号と氏名を記入しなさい。(Emailは必要ありません。)
+2. 上記の変更をリモートリポジトリに"Update assignment-0-text.md"というメッセージをつけてコミットしなさい。
+3. 上記のコミットをリモートにプッシュして提出しなさい。
