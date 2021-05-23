@@ -590,10 +590,10 @@ trans_rule = {'（':'(','）':')'}
 ```python
 # %%
 bad_code = "print（'Hello, World!'）"
-eval(bad_code)
+exec(bad_code)
 ```
 
-eval関数は、文字列をPythonコードとして実行するための関数です。以下、出力です。
+exec関数は、文字列をPythonコードとして実行するための関数です。以下、出力です。
 
 ```python
 # 出力
@@ -601,13 +601,13 @@ Traceback (most recent call last):
 
   --- (中略) ---
 
-  File "<ipython-input-14-417a423edb76>", line 2, in <module>
-    eval(bad_code)
+  File "<ipython-input-1-1a4bddd34732>", line 2, in <module>
+    exec(bad_code)
 
   File "<string>", line 1
     print（'Hello, World!'）
          ^
-SyntaxError: invalid character '（' (U+FF08)
+SyntaxError: invalid character in identifier
 ```
 
 案の定、エラーが出ました。
@@ -619,7 +619,7 @@ SyntaxError: invalid character '（' (U+FF08)
 trans = str.maketrans(trans_rule)
 good_code = bad_code.translate(trans)
 print(good_code)
-eval(good_code)
+exec(good_code)
 ```
 
 ここで、`maketrans`は、変換ルール辞書trans_ruleを、`translate`メソッドにおいて使用可能な形式に変換するだけのメソッドです。以下は出力です。
