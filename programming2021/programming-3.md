@@ -410,6 +410,8 @@ To https://github.com/kut-econ/assignment-pr21-0-yamada-taro.git
    cb907d6..16ae7e9  master -> master
 ```
 
+push時にはアカウント情報を求められるので、cloneしたときと同じように対処します。
+
 なお"--set-upstream-to"の設定を行わなかった場合は、代わりに
 
 ```bash
