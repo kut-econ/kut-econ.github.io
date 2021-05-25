@@ -69,7 +69,7 @@
 
 それでは前置きが長くなりすぎたので、そろそろPythonを動かしてみましょう。Pythonを動かすには、様々な方法がありますが、まずはREPL(Read-Eval-Print Loop)を用いた対話的実行を行ってみましょう。
 
-ウィンドウズを起動して、画面の左下の検索ウィンドウにAnacondaと打ち込んで、Anaconda Promptを起動しましょう（Anaconda Powershell Promptでも構いません）。Anacondaを起動したら、pythonと入力し、pythonの対話的インタープリタREPLを起動しましょう。プロンプトと呼ばれる'>>>'記号が現れて、入力待ちの状態になるはずです。
+ウィンドウズを起動して、画面の左下の検索ウィンドウにAnacondaと打ち込んで、Anaconda Promptを起動しましょう（Anaconda Powershell Promptでも構いません）。Anacondaを起動したら、pythonと入力し、pythonの対話的インタープリタREPLを起動しましょう。プロンプトと呼ばれる`">>>"`記号が現れて、入力待ちの状態になるはずです。
 
 REPLは、Pythonのコードを1行ごとに評価し、即時にその結果を表示してくれるシステムです。小さなコード断片の挙動を確かめる際などに便利です。
 
