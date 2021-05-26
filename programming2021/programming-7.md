@@ -514,7 +514,7 @@ c
 ## 参考書
 
 - [『High Performance Python: Practical Performant Programming for Humans』](https://www.amazon.co.jp/High-Performance-Python-Performant-Programming/dp/1492055026)(M. Gorelick, I. Ozsvald著) (2020) O'Reilly. ISBN-13 : 978-1492055020.
-- 『CPython Internals: Your Guide to The Python 3 Interpreter』(A. Shaw, The real python.com tutorial team)(2021) Real Python. ISBN-13: 978-1775093343.
+- [『CPython Internals: Your Guide to The Python 3 Interpreter』](https://www.amazon.co.jp/CPython-Internals-Guide-Python-Interpreter/dp/1775093344/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=CPython+internals&qid=1622045115&sr=8-1)(A. Shaw, The real python.com tutorial team)(2021) Real Python. ISBN-13: 978-1775093343.
 
 ## 課題
 

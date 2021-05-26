@@ -31,6 +31,8 @@
     - [記号表を精査する関数inspect_tbl](#記号表を精査する関数inspect_tbl)
     - [ローカル記号表の取得](#ローカル記号表の取得)
     - [ローカル記号表の精査](#ローカル記号表の精査)
+  - [まとめ](#まとめ)
+  - [参考書](#参考書)
   - [宿題(ホームワーク)](#宿題ホームワーク)
 
 ## 関数
@@ -580,6 +582,8 @@ Pythonは、内側から外側へ向かって名前空間を検索します。�
 3. グローバル名前空間(**G**lobal)
 4. ビルトイン名前空間(**B**uilt-in)
 
+![legb](img/legb.drawio.png)
+
 1〜4のどの名前空間を参照しても記号が見つからなかったとき、Pythonはエラー(NameError)を出します。この検索パターンを**LEGBルール**と呼びます。
 
 注意しなくてはならないのは、**関数の内側では、一つの記号は関数ブロックを通して必ず同じ名前空間を参照**するということです。
@@ -1058,10 +1062,26 @@ Symbols in g:
 
 上記のコードのような単純な例だと、記号表の恩恵はあまり感じられないかもしれません。そこで、記号表の役割を実感できる例を、ホームワークで出題することにします。
 
-最後に、`is_local`や`is_global`以外にも`Symbol`型はたくさんのメソッドを持っていて、名前解決の研究に非常に有用であることを述べておきます。以下、それらのメソッドの一部です。
+最後に、`is_local`や`is_global`以外にも`Symbol`型はたくさんのメソッドを持っていて、名前解決の研究に非常に有用であることを述べておきます。以下、上に用いたメソッドとその他幾つかをまとめておきます。
 
 |メソッド|機能|
 |--|--|
+|`is_local`|記号がそのブロックで定義されていればTrue|
+|`is_global`|記号がグローバルならばTrue(ただしトップに定義が無くてもTrueになる)|
+|`is_referenced`|記号がそのブロックで使われていればTrue|
+|`is_nonlocal`|記号がnonlocalならTrue|
+|`is_namespace`|記号が記号テーブルを持つならばTrue|
+|`get_namespaces`|記号がもつ記号テーブルのリストを返す|
+
+他にもたくさんの興味深いメソッドがありますので[リファレンスマニュアル](https://docs.python.org/ja/3/library/symtable.html)を参照してください。
+
+## まとめ
+
+## 参考書
+
+1. [『はじめてのPython』](https://www.amazon.co.jp/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AEPython-%E7%AC%AC3%E7%89%88-Mark-Lutz/dp/4873113938/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AEPython&qid=1622042001&sr=8-1)(Mark Lutz著、夏目 大 訳)(2009) オライリージャパン(第3版) ISBN-13: 978-4873113937.
+2. [『CPython Internals: Your Guide to The Python 3 Interpreter』](https://www.amazon.co.jp/CPython-Internals-Guide-Python-Interpreter/dp/1775093344/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=cpython+internals&qid=1622041957&sr=8-1)(A. Shaw, The real python.com tutorial team)(2021) Real Python. ISBN-13: 978-1775093343.
+3. [Pythonリファレンスマニュアル(symtable)](https://docs.python.org/ja/3/library/symtable.html)
 
 ## 宿題(ホームワーク)
 
