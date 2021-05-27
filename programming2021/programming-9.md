@@ -586,7 +586,7 @@ scipy.stats._stats_mstats_common.LinregressResult
 |`slope`|回帰係数のOLS推定値|
 |`stderr`|`slope`の標準誤差|
 |`pvalue`|`slope`のP値(両側t検定)|
-|`rvalue`|決定係数R|
+|`rvalue`|相関係数R|
 |`intercept`|切片のOLS推定値|
 |`intercept_stderr`|`intercept`の標準誤差|
 
