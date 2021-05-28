@@ -648,6 +648,55 @@ objdump -d -M x86-64,intel myadd.o
 |4|-2,147,483,648 ～ 2,147,483,647|0 ～ 4,294,967,295|
 |8|`-2**63` ～ `2**63-1`|0 ～ `2**64-1`|
 
+即席ですが、任意の整数を2の補数表現に変換するPython関数を作りましたので参考にしてください(バグを見つけたら教えてください。)関数についてはまだ学んでいないので、現時点でこの関数を使える必要はありません。
+
+```python
+# %%
+# 整数を2の補数表現に変換する関数
+def int_to_bits(num,length,endian='big'):
+    if type(num) is int:
+        num_bytes = num.to_bytes(length,endian,signed=True)
+        num_bin = bin(int(num_bytes.hex(),16))
+        if len(num_bin)-2 < length * 8:
+            bit_str = ("0"*(length*8-len(num_bin)+2)) + num_bin[2:]
+        else:
+            bit_str = num_bin[2:]
+        byte_list = [bit_str[8*i:8*i+8] for i in range(length)]
+        print(" ".join(byte_list))
+    else:
+        print("The first argument must be an integer.")
+```
+
+この関数は次のように使います。
+
+```python
+int_to_bits(整数,バイト数,エンディアン)
+```
+
+エンディアンは指定しなくても構いません。指定しない場合はビッグエンディアンになります(エンディアンについては下で説明しています)。
+
+たとえば、4バイト符号つき整数の-255を2の補数表現にするには、次のようにします。
+
+```python
+int_to_bits(-255,4)
+```
+
+```cmd
+# 出力
+11111111 11111111 11111111 00000001
+```
+
+リトルエンディアンにするときは、第3引数を'little'に指定してください。
+
+```python
+int_to_bits(-255,4,'little')
+```
+
+```cmd
+# 出力
+00000001 11111111 11111111 11111111
+```
+
 ### 小数
 
 小数は、**浮動小数点数**というデータ型でメモリに格納されます。浮動小数点数には**単精度**浮動小数点数と**倍精度**浮動小数点数があります。単精度では一つの数値に32ビット(4バイト)、倍精度では64ビット(8バイト)を使います。
