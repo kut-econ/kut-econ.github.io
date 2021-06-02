@@ -330,8 +330,10 @@ Host github.com
   HostName ssh.github.com
   Port 443
   IdentityFile ~/.ssh/id_rsa
-  ProxyCommand connect -H http://proxy.noc.kochi-tech.ac.jp:3128 %h %p
+  ProxyCommand connect -H http://proxy.addr:0000 %h %p
 ```
+
+ここで、`http://proxy.addr:0000`は適切なプロキシサーバーのアドレスとポート番号です。
 
 ## ホストの登録
 
