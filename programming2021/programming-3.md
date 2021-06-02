@@ -204,7 +204,7 @@ git config --global user.name "Taro Kouka"
 
 ```bash
 # Email設定
-git config --global user.email xxxxxxxx+kouka-taro@users.noreply.github.com
+git config --global user.email ????????+kouka-taro@users.noreply.github.com
 ```
 
 ここで、????????+kouka-taro@users.noreply.github.comは、githubが作成したダミーのemailアドレスです。ここに大学のemailアドレスを入力しても構いませんが、公開されるものですので、自己責任で行ってください。(いつでも好きなときに変更できます。)
