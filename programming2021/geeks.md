@@ -41,6 +41,24 @@ typedef struct {
 
 つまり、Pythonのリストの本体は、C言語の**ポインタ配列**です。64ビット処理系ではポインタは8バイトで、メモリのアドレスを格納します。ただしC言語のポインタはアドレスを格納するだけでなく、演算が定義されており、参照されるオブジェクトの型の情報も付帯されています。これはC言語の整数が値を格納するだけではなくて演算が定義されているのと同じです。
 
+また、その次のコメントを見てみると、
+
+```C
+/* ob_item contains space for 'allocated' elements.  The number
+     * currently in use is ob_size.
+     * Invariants:
+     *     0 <= ob_size <= allocated
+     *     len(list) == ob_size
+     *     ob_item == NULL implies ob_size == allocated == 0
+     * list.sort() temporarily sets allocated to -1 to detect mutations.
+     *
+     * Items must normally not be NULL, except during construction when
+     * the list is not yet visible outside the function that builds it.
+     */
+```
+
+これも非常に明解で、`ob_size`は実際に使われている要素の数であって、割り当てられているメモリのサイズ`allocated`以下になる、と書かれています。`len`関数の出力は`ob_size`であるとも書かれています。
+
 ### 新規リスト作成
 
 以下は`listobject.c`から取ったPyList_Newという新しいリストを作るCの関数です。
