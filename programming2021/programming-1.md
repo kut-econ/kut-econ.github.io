@@ -874,7 +874,7 @@ int_to_bits(-255,4,'little')
 アセンブラやコンパイラを試したい人は、次のようにして自身のAnaconda仮想環境にGNU Cコンパイラ、NASMアセンブラ、makeコマンドをインストールできます。
 
 ```cmd
-conda install -c msys2 m2w64-gcc
-conda install nasm
+conda install -c conda-forge m2w64-gcc
+conda install -c anaconda nasm
 conda install -c conda-forge make
 ```
