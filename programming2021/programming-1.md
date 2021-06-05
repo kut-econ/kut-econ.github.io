@@ -377,7 +377,7 @@ CPUとメモリはどちらもトランジスタで構成された集積回路(I
 | ギガバイト(GB)  | 10の9乗=1,000,000,000バイト |
 | テラバイト(TB) | 10の12乗バイト|
 | ペタバイト(PB) | 10の15乗バイト|
-| エクサバイト(EiB)| 10の18乗バイト|
+| エクサバイト(EB)| 10の18乗バイト|
 | キビバイト(KiB) | 2の10乗=1,024バイト         |
 | メビバイト(MiB) | 2の20乗=1,048,576バイト     |
 | ギビバイト(GiB) | 2の30乗=1,073,741,824バイト |
@@ -762,7 +762,10 @@ xxd hello.obj
 
 ## 参考書
 
-- [『プログラムはなぜ動くのか(第2版)』](https://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AF%E3%81%AA%E3%81%9C%E5%8B%95%E3%81%8F%E3%81%AE%E3%81%8B-%E7%AC%AC%EF%BC%92%E7%89%88-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98-%E7%9F%A2%E6%B2%A2%E4%B9%85%E9%9B%84/dp/4822283151/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1618632158&sr=8-1)(矢沢久雄 著/日経ソフトウェア監修) (2007) 日経BP社. ISBN 978-4-8222-8315-5.
+1. [『プログラムはなぜ動くのか(第2版)』](https://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AF%E3%81%AA%E3%81%9C%E5%8B%95%E3%81%8F%E3%81%AE%E3%81%8B-%E7%AC%AC%EF%BC%92%E7%89%88-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98-%E7%9F%A2%E6%B2%A2%E4%B9%85%E9%9B%84/dp/4822283151/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1618632158&sr=8-1)(矢沢久雄 著/日経ソフトウェア監修) (2007) 日経BP社. ISBN 978-4-8222-8315-5.
+2. [『Beginning x64 Assembly Programming』](https://www.amazon.co.jp/Beginning-x64-Assembly-Programming-Professional/dp/1484250753/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=beginning+x64+assembly&qid=1622904457&s=english-books&sr=1-1)(Jo Van Hoey 著)(2019) Apress. ISBN-13: 978-1484250754.
+
+どちらも読み易い名著です。特に2は非常に英語が平易です。1はBorland C++/Windowsを仮定していますが、2はNASM/Ubuntu 18.04を仮定しています。
 
 ## 宿題（ホームワーク）
 
