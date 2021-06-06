@@ -25,6 +25,7 @@
   - [課題(アサインメント)](#課題アサインメント)
   - [FAQ](#faq)
     - [Rのバージョン3.6をmyenv環境にインストールする](#rのバージョン36をmyenv環境にインストールする)
+    - [コンパイラとアセンブラをmyenv環境にインストールする](#コンパイラとアセンブラをmyenv環境にインストールする)
     - [コマンドプロンプトからVS Codeが起動しない](#コマンドプロンプトからvs-codeが起動しない)
     - [『実行』ボタンで『condaが見つからない』エラーが出る](#実行ボタンでcondaが見つからないエラーが出る)
     - [REPLで変なエラーが出るようになった](#replで変なエラーが出るようになった)
@@ -596,8 +597,7 @@ conda install package_name=ver_num
 
 とします。ver_numはバージョン番号です。
 
-たとえば、次のようにすればデータ解析パッケージのpandasをインストールできます。注)myenv環境に、Rのバージョン3.6を入れておいてください。やり方は[FAQ](#faq)を参照。
-
+たとえば、次のようにすればデータ解析パッケージのpandasをインストールできます。注)myenv環境に、Rのバージョン3.6やCのコンパイラ、アセンブラ等を入れておいてください。やり方は[FAQ](#faq)を参照。
 
 ```anaconda
 conda install pandas
@@ -713,6 +713,18 @@ install.packages('pryr')
 ```
 
 `stringi`をソースからコンパイルしますか云々と英語で聞かれますが、`no`で大丈夫です。
+
+### コンパイラとアセンブラをmyenv環境にインストールする
+
+次のようにして自身のAnaconda仮想環境にGNU Cコンパイラ、NASMアセンブラ、makeコマンドをインストールできます。
+
+`myenv`環境にこれらをインストールする場合は、`myenv`を`activate`してから、次のように入力します。
+
+```cmd
+conda install -c conda-forge m2w64-gcc
+conda install -c anaconda nasm
+conda install -c conda-forge make
+```
 
 ### コマンドプロンプトからVS Codeが起動しない
 
