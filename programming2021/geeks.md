@@ -2,11 +2,15 @@
 
 ここに書かれていることは、CPythonのテクニカルな詳細であって、全く理解する必要ありませんが、知っていればよりPythonの理解が深まります。
 
+## リンク
+
+- [CPythonソースツリー検索ツール](https://elixir.ortiz.sh/python/latest/source)
+
 ## CPythonのリストのメモリ利用
 
 ### リスト構造体
 
-CPythonのリストは[listobject.h](https://github.com/python/cpython/blob/main/Include/cpython/listobject.h)と[listobject.c](https://github.com/python/cpython/blob/main/Objects/listobject.c)で実装されています。
+CPythonのリストは[listobject.h](https://elixir.ortiz.sh/python/v3.9.0/source/Include/cpython/listobject.h)と[listobject.c](https://elixir.ortiz.sh/python/v3.9.0/source/Objects/listobject.c)で実装されています。
 
 以下のように、`listobject.h`を見ると、リストがCの構造体`PyListObject`として定義されているのが分かります。
 
@@ -121,7 +125,7 @@ op->ob_item = (PyObject **) PyMem_Calloc(size, sizeof(PyObject *));
  Py_SET_SIZE(op, size);
 ```
 
-で設定されています。このサイズは割当メモリサイズではなく実際に格納されている要素の個数です。`Py_SET_SIZE`関数は[object.h](https://github.com/python/cpython/blob/main/Include/object.h)で次のように定義されています。
+で設定されています。このサイズは割当メモリサイズではなく実際に格納されている要素の個数です。`Py_SET_SIZE`関数は[object.h](https://elixir.ortiz.sh/python/v3.9.0/source/Include/object.h#L142)で次のように定義されています。
 
 ```C
 static inline void _Py_SET_SIZE(PyVarObject *ob, Py_ssize_t size) {
@@ -130,7 +134,7 @@ static inline void _Py_SET_SIZE(PyVarObject *ob, Py_ssize_t size) {
 #define Py_SET_SIZE(ob, size) _Py_SET_SIZE(_PyVarObject_CAST(ob), size)
 ```
 
-これを見ると分かるように単にオブジェクトの`ob_size`を`size`に設定しているだけです。さらに`ob_size`はというと、`PyVarObject`構造体のメンバで、同じく`object.h`で定義されています。
+これを見ると分かるように単にオブジェクトの`ob_size`を`size`に設定しているだけです。さらに`ob_size`はというと、`PyVarObject`構造体のメンバで、同じく[object.h](https://elixir.ortiz.sh/python/v3.9.0/source/Include/object.h#L118)で定義されています。
 
 ```C
 typedef struct {
@@ -149,7 +153,7 @@ op->allocated = size;
 
 という操作によって、**allocate**された区画の数を`allocated`属性に格納しています。これは一般に`op->ob_size`と同じかより大きいですが、リストを新規作成した場合はこの２つが同じ値になっていることが分かります。言い換えると、リストの新規作成では、**余分なメモリ領域を確保しません**。講義資料本編の実験で、リストのメモリ占有量が要素の個数と線形の関係を持っていたのはそのためです。
 
-問題は`__sizeof__`メソッドで返されるメモリサイズの方ですが、こちらは`listobject.c`の`list__sizeof__impl`関数で定義されています。
+問題は`__sizeof__`メソッドで返されるメモリサイズの方ですが、こちらは[listobject.c](https://elixir.ortiz.sh/python/v3.9.0/source/Objects/listobject.c#L2754)の`list__sizeof__impl`関数で定義されています。
 
 ```C
 /*[clinic input]
@@ -170,7 +174,7 @@ list___sizeof___impl(PyListObject *self)
 
 `self->allocated * sizeof(void*)`は、割り当てられたメモリサイズですが、その他に、`_PyObject_SIZE(Py_TYPE(self)`)というのが足されています。これがリスト構造のサイズであり、オーバーヘッドに相当します。
 
-`_PyObject_SIZE`はというと、[objimpl.h](https://github.com/python/cpython/blob/main/Include/cpython/objimpl.h)で定義されています。
+`_PyObject_SIZE`はというと、[objimpl.h](https://elixir.ortiz.sh/python/v3.9.0/source/Include/cpython/objimpl.h#L9)で定義されています。
 
 ```C
 #define _PyObject_SIZE(typeobj) ( (typeobj)->tp_basicsize )
