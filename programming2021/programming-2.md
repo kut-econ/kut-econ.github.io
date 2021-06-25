@@ -398,7 +398,7 @@ VS Codeで、`.drawio.png`という拡張子のファイルを作ってくださ
 ---
 marp: true
 ---
-<! --
+<!--
 headingDivider: 2
 -->
 ```
