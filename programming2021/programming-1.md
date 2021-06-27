@@ -593,7 +593,7 @@ print("Hello world!")
 たとえば、次のC言語のプログラムは、aという変数に1を代入し(正確には1という値で初期化し)、そのあとaに2を足すというだけのプログラムです。
 
 ```C
-int MyAdd(){
+int MyAdd(void){
   int a = 1;
   a = a + 2;
   return a;
@@ -603,13 +603,25 @@ int MyAdd(){
 これをコンパイルして出来たオブジェクトファイルを逆アセンブルすると、次のようなアセンブリ言語のコードが得られます。
 
 ```nasm
-push   rbp
-mov    rbp,rsp
-mov    DWORD PTR [rbp-0x4],0x1
-add    DWORD PTR [rbp-0x4],0x2
-mov    eax,DWORD PTR [rbp-0x4]
-pop    rbp
-ret
+myadd.o:     file format pe-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <MyAdd>:
+   0:   55                      push   rbp
+   1:   48 89 e5                mov    rbp,rsp
+   4:   48 83 ec 10             sub    rsp,0x10
+   8:   c7 45 fc 01 00 00 00    mov    DWORD PTR [rbp-0x4],0x1
+   f:   83 45 fc 02             add    DWORD PTR [rbp-0x4],0x2
+  13:   8b 45 fc                mov    eax,DWORD PTR [rbp-0x4]
+  16:   48 83 c4 10             add    rsp,0x10
+  1a:   5d                      pop    rbp
+  1b:   c3                      ret
+  1c:   90                      nop
+  1d:   90                      nop
+  1e:   90                      nop
+  1f:   90                      nop
 ```
 
 ![assembly](img/assemble.drawio.png)
