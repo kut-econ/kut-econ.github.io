@@ -49,7 +49,7 @@ import module_name  #　モジュール読み込み
 module_name.function_name()   # 関数呼び出し
 ```
 
-あるいは、関数`function_name`だけを読み込みたい場合は、次のような**相対インポート**も可能です。
+あるいは、関数`function_name`だけを読み込みたい場合は、次のような`from ... import`文を用いることができます。
 
 ```python
 # %%
@@ -57,7 +57,7 @@ from module_name import function_name
 function_name()
 ```
 
-相対インポートでは、モジュール名`module_name.`を頭に付けることなく関数`function_name`を呼び出すことができるようになりますが、モジュール`module_name`内のそれ以外の関数は呼び出せません。モジュールについては、後の講義で詳しく取り上げます。
+このようにして読み込んだ場合、モジュール名`module_name.`を頭に付けることなく関数`function_name`を呼び出すことができるようになりますが、モジュール`module_name`内のそれ以外の関数は呼び出せません。モジュールについては、後の講義で詳しく取り上げます。
 
 さて**sysモジュール**は、ビルトインモジュールという特殊なモジュールであり、ファイルとしては存在しておらず、[Pythonインタープリタに埋め込まれ(built-in)ています](https://python.readthedocs.io/en/stable/tutorial/modules.html#tut-standardmodules)。`sys`の関数群を用いると、Pythonの非常に基本的な機能にアクセスすることができます。ここでは、`getsizeof`という、引数に与えたオブジェクトの占有メモリサイズをバイト単位で返してくれる関数を使いましょう。
 
