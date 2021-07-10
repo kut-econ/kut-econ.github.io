@@ -718,9 +718,9 @@ print(s_temp_l,end=' --> ')
 
 ```R
 if (i < 50) {
-  end_str = ' --> '   # ifブロック
+  end_str <- ' --> '   # ifブロック
 } else {
-  end_str = '\n'      # elseブロック
+  end_str <- '\n'      # elseブロック
 }
 ```
 
