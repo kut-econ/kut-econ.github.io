@@ -342,7 +342,6 @@ SyntaxError: invalid character in identifier
 エンコーディングの逆の変換、すなわちバイト列を文字列に変換する操作を**デコーディング**と言います。Pythonでは、バイトオブジェクトのdecodeメソッドを用いて行うことができます。
 
 ```python
->>> x_str = 'ありがとう'
 >>> thanks_str = 'ありがとう'
 >>> thanks_bytes = thanks_str.encode('utf-8')
 >>> thanks_bytes
