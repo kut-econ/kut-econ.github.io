@@ -808,4 +808,4 @@ with open('howareyou.txt','bw') as file:
 
 ## 課題(アサインメント)
 
-課題3の招待リンクと詳細をMoodleに掲載します。
+課題4の招待リンクと詳細をMoodleに掲載します。
