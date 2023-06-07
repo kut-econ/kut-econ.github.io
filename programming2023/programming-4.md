@@ -585,7 +585,7 @@ TypeError: 'str' object does not support item assignment
 
 この事実を利用して、Pythonは、シンプルなイミュータブルオブジェクトに関しては、自動的に再利用するようになっています。
 
-```python {.line-numbers}
+```python
 >>> x = 1
 >>> y = 1
 >>> x is y
