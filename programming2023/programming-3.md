@@ -118,7 +118,7 @@ Gitは今すぐにでも使うことができますが、GitHubを利用する�
 
 登録に用いたアドレスに8桁の検証コードが送信されるので、メールボックスを確認してコードを入力してください。
 
-![signup5.PNG](img/signup5_modified.PNG)
+![signup5_modified.PNG](img/signup5_modified.PNG)
 
 次に"How many..."は"Just me"、"Are you a student or teacher?"は"Student"を選択してください。
 
