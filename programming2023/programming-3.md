@@ -77,28 +77,26 @@ GitHubのリモートリポジトリには、プライベートリポジトリ�
 
 ## GitHubアカウントの作成
 
-Gitは今すぐにでも使うことができますが、GitHubを利用するには、まずGitHubのサイトでユーザー登録をしてアカウントを作成する必要があります。以下のような方は、必ず新たにアカウントを作成してください。
-
-- GitHubアカウントを持っていない人
-- GitHubアカウントを持っているが、大学以外のメールアドレスでカウントを作成した人
-
-大学のメールアドレスで作成したGitHubアカウントをお持ちの方は、新たに作成する必要はありません。
+Gitは今すぐにでも使うことができますが、GitHubを利用するには、まずGitHubのサイトでユーザー登録をしてアカウントを作成する必要があります。すでにアカウントをお持ちの方は本節を読み飛ばして構いません。
 
 インターネットブラウザで[GitHub](https://github.com/)のサイトに行き、画面右上の"Sign up"をクリックします。
 
 "Create your account"という画面になりますので、以下の項目を入力します。
 
-   1. ユーザー名
-   2. Emailアドレス(原則として大学のアドレスを入力)
-   3. パスワード(紛失しないよう厳重に管理すること)
+   1. Emailアドレス(原則として大学のアドレスを入力)
+   2. パスワード(紛失しないよう厳重に管理すること)
+   3. ユーザー名
+   4. 広告の受け取りの可否(不要なら"n"を選択)
+
+![Create your account](img/signup2_modified.PNG)
 
 ユーザーネームを作成するときは、以下の点にご注意ください。
 
 - 一度アカウントを作成したらユーザー名は(少なくとも在学中は)変更しないでください。
 - 長く使うものなので、よく考えて命名してください。
 - 他人の名前を使わないでください。
-- 生年月日などの個人情報は含まないでください。
-- すべて**小文字英数字**にしてください。
+- 生年月日などの個人情報は含めないでください。
+- すべて**英数字**にしてください。
 - アルファベットは小文字にすることをお勧めします。
 - 途中に連続しない**ハイフン**を使うことができます。
 
@@ -110,39 +108,31 @@ Gitは今すぐにでも使うことができますが、GitHubを利用する�
   - 8文字以上で数字と小文字アルファベットを両方含む。
 - パスワードは紛失しないように管理してください。
 
-![create_account_github](img/create_account_github.png)
+ユーザー名等の入力を終えたら、"Verify your account"の項目でロボットでないことを証明してください。
 
-ユーザー名等の入力を終えたら、"Verify your account"の項目でロボットでないことを証明し、"Creat account"をクリックします。
+![signup3.PNG](img/signup3.PNG)
 
-"Welcome to GitHub"というページになりますので、以下のように入力してください。
+"Create account"をクリックします。
 
-What kind of work do you do, mainly?はStudentを選択してください。
+![signup4.PNG](img/signup4.PNG)
 
-![welcome_github1](img/welcome_github1.png)
+登録に用いたアドレスに8桁の検証コードが送信されるので、メールボックスを確認してコードを入力してください。
 
-How much programming experience do you have?はA littleなどご自身のプログラミング経験のレベルにあったものを選択してください。
+![signup5.PNG](img/signup5_modified.PNG)
 
-![welcome_github2](img/welcome_github2.png)
+次に"How many..."は"Just me"、"Are you a student or teacher?"は"Student"を選択してください。
 
-What do you plant to use GitHub for?については、Learn to code、Learn Git and GitHub、School work and student projectsなどを選択しておけば良いでしょう。(3つまで選択可)
+![signup6.PNG](img/signup6.PNG)
 
-![welcome_github3](img/welcome_github3.png)
+"What specific features...?"と聞かれますが、何もチェックせずにcontinueボタンをクリックしてください。
 
-I am interested inのところは、pythonと入力し、"Complete setup"をクリックします。
+![signup7.PNG](img/signup7.PNG)
 
-![welcome_github4](img/welcome_github4.png)
+FreeかProかを聞いてくるので、Freeを選択してください。
 
-"Please verify your email address"という画面になったら無事アカウント作成に成功です。
+![signup8.PNG](img/signup8.PNG)
 
-![github_please_verify](img/github_please_verify.png)
-
-アカウント作成の後、認証作業が必要になります。登録した大学のEmailにGitHubから"Please verify your email address"という件名のメールが来ているはずですので、内容を確認してください。"Verify email address"というボタンがあるはずなので、これをクリックします。
-
-インターネットブラウザが起動し、"What do you want to do first?"というページになりますので、一番下の"Skip this for now"をクリックしてください。これでアカウント作成・認証とも完了です。いつでもGitHubが使える状態になりました。
-
-![github_what_do_you](img/github_what_do_you.png)
-
-今後GitHubにログインするときは、GitHubのページの右上の"Sign in"をクリックしてユーザー名とパスワードを入力してください。
+これでアカウント作成完了です。今後GitHubにログインするときは、GitHubのページの右上の"Sign in"をクリックしてユーザー名とパスワードを入力してください。
 
 ## EmailアドレスのPrivate設定
 
