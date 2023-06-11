@@ -88,7 +88,7 @@ Gitは今すぐにでも使うことができますが、GitHubを利用する�
    3. ユーザー名
    4. 広告の受け取りの可否(不要なら"n"を選択)
 
-![Create your account](img/signup2_modified.PNG)
+![signup2_modified.PNG](img/signup2_modified.png)
 
 ユーザーネームを作成するときは、以下の点にご注意ください。
 
