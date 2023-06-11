@@ -88,7 +88,7 @@ Gitは今すぐにでも使うことができますが、GitHubを利用する�
    3. ユーザー名
    4. 広告の受け取りの可否(不要なら"n"を選択)
 
-![signup2_modified.PNG](img/signup2_modified.png)
+![signup2modified.PNG](img/signup2_modified.png)
 
 ユーザーネームを作成するときは、以下の点にご注意ください。
 
@@ -118,7 +118,7 @@ Gitは今すぐにでも使うことができますが、GitHubを利用する�
 
 登録に用いたアドレスに8桁の検証コードが送信されるので、メールボックスを確認してコードを入力してください。
 
-![signup5_modified.PNG](img/signup5_modified.PNG)
+![signup5modified.PNG](img/signup5_modified.png)
 
 次に"How many..."は"Just me"、"Are you a student or teacher?"は"Student"を選択してください。
 
@@ -662,3 +662,6 @@ Gitには便利なコマンドが無数に存在しますので、インター�
 6. `git log`コマンドについて研究しなさい。これは過去のコミット履歴を表示するものです。
 7. `git checkout`コマンドについて調べなさい。`HEAD`と`master`が分離する(detach)とはどのような状態を表すか？
 8. Gitの「ブランチ」について調べなさい。それはどのようなものか？
+
+
+[def]: img/signup5_modified.PNG
