@@ -943,7 +943,7 @@ print(prime)
 ```python
 i = 491     # iを491に設定
 prime = True    # 変数primeをTrueに設定
-for j in range(2,i):    # iを2からi-1まで増やす
+for j in range(2,i):    # jを2からi-1まで増やす
     if i % j == 0:
         prime = False   # 素数でない
 if prime == True:
@@ -955,7 +955,7 @@ if prime == True:
 ```python
 for i in range(2,1000):
     prime = True    # 変数primeをTrueに設定
-    for j in range(2,i):    # iを2からi-1まで増やす
+    for j in range(2,i):    # jを2からi-1まで増やす
         if i % j == 0:
             prime = False   # 素数でない
     if prime == True:
@@ -969,7 +969,7 @@ for i in range(2,1000):
 ```python
 for i in range(2,1000):
     prime = True    # 変数primeをTrueに設定
-    for j in range(2,i):    # iを2からi-1まで増やす
+    for j in range(2,i):    # jを2からi-1まで増やす
         if i % j == 0:
             prime = False   # 素数でない
     if prime:
@@ -982,7 +982,7 @@ for i in range(2,1000):
 
 ```python
 for i in range(2,1000):
-    for j in range(2,i+1):    # iを2からiまで増やす
+    for j in range(2,i+1):    # jを2からiまで増やす
         if i % j == 0:
             break
     if j == i:
