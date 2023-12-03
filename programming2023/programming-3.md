@@ -180,7 +180,7 @@ Gitは使用前に以下の項目に関する初期設定が必要です。
 - ユーザー名
 - Emailアドレス（GitHubのダミーemail）
 - エディタ
-- プロキシ
+- プロキシ(大学のPCを使う場合)
 - sshの設定
 
 ユーザー名、Emailアドレス、プロキシを設定するには次のようにコンソールに打ち込みます。
@@ -199,13 +199,15 @@ git config --global user.email ????????+kouka-taro@users.noreply.github.com
 
 ここで、????????+kouka-taro@users.noreply.github.comは、githubが作成したダミーのemailアドレスです。ここに大学のemailアドレスを入力しても構いませんが、公開されるものですので、自己責任で行ってください。(いつでも好きなときに変更できます。)
 
+大学のパソコンを使う場合は、プロキシの設定が必要です。**自分のパソコンを使う場合は設定してはいけませんので、次の操作は行わないでください。**
+
 ```bash
 # proxy設定
 git config --global http.proxy http://proxy.addr:0000
 git config --global https.proxy http://proxy.addr:0000
 ```
 
-proxy.addrは適切なプロキシサーバー名、0000は適切なポート番号に設定してください。
+proxy.addrは適切なプロキシサーバー名、0000は適切なポート番号に設定してください。プロキシサーバー名とポート番号はLMSに掲載しておきます。
 
 Gitでは、「コミット」という操作を行う際にエディタを起動する必要があります。その際に用いるエディタをcodeにしておきましょう。デフォルトではviですので、viのままで良い人は設定の必要はありません。
 
