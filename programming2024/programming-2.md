@@ -16,7 +16,6 @@
     - [PDFへの出力](#pdfへの出力)
     - [図の作成](#図の作成)
     - [スライドの作成](#スライドの作成)
-  - [プロキシの設定(Anaconda)](#プロキシの設定anaconda)
   - [Anaconda仮想環境](#anaconda仮想環境)
   - [仮想環境の状態チェック](#仮想環境の状態チェック)
   - [仮想環境の構築](#仮想環境の構築)
@@ -30,6 +29,7 @@
     - [コマンドプロンプトからVS Codeが起動しない](#コマンドプロンプトからvs-codeが起動しない)
     - [『実行』ボタンで『condaが見つからない』エラーが出る](#実行ボタンでcondaが見つからないエラーが出る)
     - [REPLで変なエラーが出るようになった](#replで変なエラーが出るようになった)
+    - [プロキシの設定(Anaconda)](#プロキシの設定anaconda)
 
 ## VS Codeを起動する
 
@@ -435,45 +435,6 @@ headingDivider: 2
 PDFに出力することも簡単にできますので試してみてください(編集画面の上のほうにある三角マークからできます)。
 
 VS Codeの話は上記でおしまいです。VS Codeには他にも様々な拡張機能があるので、色々探してみてください。
-
-## プロキシの設定(Anaconda)
-
-ここからは、**Anaconda**の話をします。Anacondaは、Pythonに科学計算に有用な様々なツール、ライブラリ一式を合わせたもので、フリーで公開されています。
-
-Anacondaを使っていると、インストール済みの機能に満足が行かなくなるときがいつか来ます。そういう時は、インターネット経由でAnacondaに追加の機能をインストールする必要が出てきますが、そのためには、プロキシの設定が必要になります。
-
-Windowsスタートメニューから、Anaconda Promptを起動し、次のように入力すると、Anacondaの設定が表示されます。
-
-```cmd
-(base) C:\Users\hoge>conda config --show
-```
-
-これだと全ての設定が表示されてしまって見にくいので、以下のようにしてプロキシの設定だけ表示しましょう。
-
-```cmd
-(base) C:\Users\hoge>conda config --show proxy_servers
-proxy_servers: {}
-```
-
-上記のようにproxy_serversの項目が空欄になっていたら、プロキシが設定されていません。その場合は、以下のように順次入力してhttpとhttpsの両方にnocのプロキシサーバーを設定しましょう。
-
-```cmd
-(base) C:\Users\hoge>conda config --set proxy_servers.http http://proxy-server-addr:????
-(base) C:\Users\hoge>conda config --set proxy_servers.https http://proxy-server-addr:????
-```
-
-ここで、proxy-server.addrは正しいプロキシサーバーのアドレス(Moodleに記載)に、????は正しいポート番号に置き換えてください。
-
-もう一度設定を表示して、プロキシが正しく設定されているか確認しましょう。
-
-```cmd
-(base) C:\Users\hoge>conda config --show proxy_servers
-proxy_servers:
-  http: http://proxy-server-addr:????
-  https: http://proxy-server-addr:????
-```
-
-上記の用に表示されれば正しく設定されています。
 
 ## Anaconda仮想環境
 
@@ -885,3 +846,40 @@ echo %HOME%
 ```
 
 と叩いて表示されるディレクトリを探してみてください。Windowsで隠しファイル(ピリオドからはじまるファイル名)を表示しないモードになっていると見つからないのでご注意ください。
+
+### プロキシの設定(Anaconda)
+
+大学の有線LANに繋がっている研究室のパソコン等でAnacondaを使用する場合、プロキシの設定が必要です。ただし、コンピュータールームのパソコンは最初からプロキシが設定されているので、本項目の作業は必要ありません。
+
+Windowsスタートメニューから、Anaconda Promptを起動し、次のように入力すると、Anacondaの設定が表示されます。
+
+```cmd
+(base) C:\Users\hoge>conda config --show
+```
+
+これだと全ての設定が表示されてしまって見にくいので、以下のようにしてプロキシの設定だけ表示しましょう。
+
+```cmd
+(base) C:\Users\hoge>conda config --show proxy_servers
+proxy_servers: {}
+```
+
+上記のようにproxy_serversの項目が空欄になっていたら、プロキシが設定されていません。その場合は、以下のように順次入力してhttpとhttpsの両方にnocのプロキシサーバーを設定しましょう。
+
+```cmd
+(base) C:\Users\hoge>conda config --set proxy_servers.http http://proxy-server-addr:????
+(base) C:\Users\hoge>conda config --set proxy_servers.https http://proxy-server-addr:????
+```
+
+ここで、proxy-server.addrは正しいプロキシサーバーのアドレス(Moodleに記載)に、????は正しいポート番号に置き換えてください。
+
+もう一度設定を表示して、プロキシが正しく設定されているか確認しましょう。
+
+```cmd
+(base) C:\Users\hoge>conda config --show proxy_servers
+proxy_servers:
+  http: http://proxy-server-addr:????
+  https: http://proxy-server-addr:????
+```
+
+上記の用に表示されれば正しく設定されています。
