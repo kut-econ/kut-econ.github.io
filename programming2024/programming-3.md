@@ -179,37 +179,24 @@ Gitは使用前に以下の項目に関する初期設定が必要です。
 
 - ユーザー名
 - Emailアドレス（GitHubのダミーemail）
-- エディタ
-- プロキシ(大学のPCを使う場合)
+- エディタにVSCodeを指定する
 - sshの設定
 
-ユーザー名、Emailアドレス、プロキシを設定するには次のようにコンソールに打ち込みます。
+ユーザー名を設定するには、次のようにコンソールに打ち込みます。注意: `Taro Kouka`のところは、自分の本名をアルファベット半角で入力してください!また、`#`記号に続く行は単なる説明なので、入力する必要はありません!
 
 ```bash
 # ユーザー名設定
 git config --global user.name "Taro Kouka"
 ```
 
-ここで、Taro Koukaは自分の本名です。
+Emailアドレスを設定するには、次のようにコンソールに打ち込みます。注意: `????????+kouka-taro@users.noreply.github.com`のところには、githubが作成したダミーのemailアドレスを入力してください!
 
 ```bash
 # Email設定
 git config --global user.email ????????+kouka-taro@users.noreply.github.com
 ```
 
-ここで、????????+kouka-taro@users.noreply.github.comは、githubが作成したダミーのemailアドレスです。ここに大学のemailアドレスを入力しても構いませんが、公開されるものですので、自己責任で行ってください。(いつでも好きなときに変更できます。)
-
-大学のパソコンを使う場合は、プロキシの設定が必要です。**自分のパソコンを使う場合は設定してはいけませんので、次の操作は行わないでください。**
-
-```bash
-# proxy設定
-git config --global http.proxy http://proxy.addr:0000
-git config --global https.proxy http://proxy.addr:0000
-```
-
-proxy.addrは適切なプロキシサーバー名、0000は適切なポート番号に設定してください。プロキシサーバー名とポート番号はLMSに掲載しておきます。
-
-Gitでは、「コミット」という操作を行う際にエディタを起動する必要があります。その際に用いるエディタをcodeにしておきましょう。デフォルトではviですので、viのままで良い人は設定の必要はありません。
+Gitでは、「コミット」という操作を行う際にエディタを起動する必要があります。その際に用いるエディタをcodeにしておきましょう。
 
 ```bash
 # エディタの設定
@@ -220,33 +207,32 @@ git config --global core.editor "code --wait"
 
 なお、**VS Codeのパス**を通していない人は、この設定も必要です。これについては、[前回資料](./programming-2.md)末尾の覚書を参考にしてください。
 
-設定がうまく行ったか次のコマンドで調べておきましょう。
+設定がうまく行ったか次のコマンドを入力して調べておきましょう。
 
 ```bash
 # 設定項目をリストアップ
-$ git config --global --list
+git config --global --list
+```
+
+出力が次のようになっていれば設定完了です。
+
+```bash
 user.name=Taro Kouka
 user.email=????????-kouka-taro@users.noreply.github.com
 core.editor=code --wait
-proxy.http=http://proxy.addr:0000
-proxy.https=http://proxy.addr:0000
 ```
-
-上記のようになっていれば設定完了です。
 
 ## sshの設定
 
 ### 鍵の作成
 
-githubはhttpsとsshという２つの方法で接続できますが、ここではssh接続を解説することにします。どちらの接続方法でも構いませんので、すでに接続できているならば、ここは読み飛ばしてください。(ただしhttpsで接続している方は、2021年の8月からは通常のパスワードの代わりにpersonal access tokenという文字列を入力しないと接続できなくなりますので、注意してください。)
-
-まず、bashのコンソールで、次のように入力してください。
+githubはhttpsとsshという２つの方法で接続できますが、ここではssh接続を解説することにします。まず、git bashのコンソールで、次のように入力してください。注意: `kouka.taro@*****.ac.jp`は、**Githubに登録したあなたの真のEmailアドレス**に設定します。
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "kouka.taro@*****.ac.jp"
 ```
 
-ここで、`"kouka.taro@*****.ac.jp"`は、**Githubに登録した真のEmailアドレス**に設定します。秘密鍵ファイルの名前やパスフレーズなどを尋ねられますが、今回初めてSSHを使う人は全て空欄のまま`Enter`キーを押して大丈夫です。(SSHを普段から使っていて詳しい人は、適切に設定してください。)合計3回`Enter`キーを押せば鍵が作られます。
+秘密鍵ファイルの名前やパスフレーズなどを尋ねられますが、今回初めてSSHを使う人は全て空欄のまま`Enter`キーを押して大丈夫です。(SSHを普段から使っていて詳しい人は、適切に設定してください。)合計3回`Enter`キーを押せば鍵が作られます。
 
 これにより**ホームパス**の下の`.ssh`というフォルダの中に秘密鍵と公開鍵が作られます。ホームパスがわからない人は、gitで
 
