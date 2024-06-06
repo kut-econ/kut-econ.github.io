@@ -120,6 +120,10 @@ Preferences: Open Settings (JSON)
 - Japanese Language Pack for VS Code (VS Codeを日本語化)
 - Python
 - Awesome Emacs Keymap (Emacsキーバインディング)
+- Markdown All in One (マークダウン便利ツール集)
+- markdownlint (Markdownの構文チェッカー)
+- Markdown PDF (MarkdownファイルをPDFやHTMLに変換)
+
 <!--
 - Pylance (Intellisenseがうまく機能しない場合、試す価値あり)
 - Path Intellisense (ファイル名パス補完)
@@ -128,9 +132,6 @@ Preferences: Open Settings (JSON)
 - Rainbow CSV (CSVファイルが見やすくなります)
 - Edit CSV (CSVが編集できる)
 -->
-- Markdown All in One (マークダウン便利ツール集)
-- markdownlint (Markdownの構文チェッカー)
-- Markdown PDF (MarkdownファイルをPDFやHTMLに変換)
 
 <!--
 マークダウン系のエクステンションは(文字通り)無数に存在しますので、必ずしも上記のもので無くて良いですし、より良いものがあるかもしれません。ぜひ自分に合うエクステンションを探してみてください。上のエクステンションを全て一度にインストールするのは大変だと思うので、まずは**Japanese Language Pack**と**Python**エクステンションをインストールしましょう（残りは各自インストールしておいてください）。
