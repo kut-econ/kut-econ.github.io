@@ -112,6 +112,7 @@ Preferences: Open Settings (JSON)
 
 - Japanese Language Pack for VS Code (VS Codeを日本語化)
 - Python
+- Jupyter(インターラクティブモード)
 - Awesome Emacs Keymap (Emacsキーバインディング)
 - Markdown All in One (マークダウン便利ツール集)
 - markdownlint (Markdownの構文チェッカー)
