@@ -86,9 +86,9 @@ Gitは今すぐにでも使うことができますが、GitHubを利用する�
    1. Emailアドレス(原則として大学のアドレスを入力)
    2. パスワード(紛失しないよう厳重に管理すること)
    3. ユーザー名
-   4. 広告の受け取りの可否(不要なら"n"を選択)
+   4. 広告の受け取りの可否(不要ならチェックしない)
 
-![signup2modified.PNG](img/signup2_modified.png)
+![signup2modified.PNG](img/receive_announcements.png)
 
 ユーザーネームを作成するときは、以下の点にご注意ください。
 
@@ -120,8 +120,15 @@ Gitは今すぐにでも使うことができますが、GitHubを利用する�
 
 ![signup5modified.PNG](img/signup5_modified.png)
 
-次に"How many..."は"Just me"、"Are you a student or teacher?"は"Student"を選択してください。
+これでアカウントが作成されました。ユーザー名とパスワードを求められますので、入力してください。
 
+![snapshot.PNG](img/snapshot_login.png)
+
+次に"How many..."などパーソナライゼーションのための質問を幾つかされますが、画面下部の`skip personalization`をクリックすれば全てスキップできます。
+
+![skip_personalization.PNG](img/skip_personalization.png)
+
+<!--
 ![signup6.PNG](img/signup6.PNG)
 
 "What specific features...?"と聞かれますが、何もチェックせずにcontinueボタンをクリックしてください。
@@ -133,6 +140,7 @@ FreeかProかを聞いてくるので、Freeを選択してください。
 ![signup8.PNG](img/signup8.PNG)
 
 これでアカウント作成完了です。今後GitHubにログインするときは、GitHubのページの右上の"Sign in"をクリックしてユーザー名とパスワードを入力してください。
+-->
 
 ## EmailアドレスのPrivate設定
 
