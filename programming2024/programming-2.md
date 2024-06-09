@@ -112,7 +112,7 @@ Preferences: Open Settings (JSON)
 以下のエクステンションが必要ですので、インストールしましょう。
 
 - Japanese Language Pack for VS Code (VS Codeを日本語化)
-- Python
+- Python(Microsoftのもの)
 - Jupyter(インターラクティブモード)
 - Awesome Emacs Keymap (Emacsキーバインディング)
 - Markdown All in One (マークダウン便利ツール集)
@@ -156,7 +156,7 @@ VS Codeのエクスプローラからmy_first_code.pyというファイルを作
 
 ![interactive](img/interactive.png)
 
-**尚、初回は「インタープリタが未選択」という通知が出る場合があります。** これは、後述するように、一つのパソコンに複数のPythonがインストールされている可能性があるので、どのPythonを使うのか定められていないということです。その時は、通知内容にしたがって、インタープリタを選択します。"Python 3.x.x xx-bit ('base': conda)"を選択してください。(xは各自の環境に依存します。)正しいインタープリタが選択されていれば、画面の右下に、"Python 3.x.x xx-bit ('base': conda)"の表記が表示されます。正しいインタープリタが選択されていない場合は、「[VS Codeで特定の仮想環境を使う](#vs-codeで特定の仮想環境を使う)」の欄の記述に従って、選択を行ってください。
+**尚、初回は「インタープリタが未選択」という通知が出る場合があります。** これは、[後述](#anacondaとは)するように、一つのパソコンに複数のPythonがインストールされている可能性があるので、どのPythonを使うのか定められていないということです。その時は、通知内容にしたがって、インタープリタを選択します。"Python 3.x.x xx-bit ('base': conda)"を選択してください。(xは各自の環境に依存します。)正しいインタープリタが選択されていれば、画面の右下に、"Python 3.x.x xx-bit ('base': conda)"の表記が表示されます。正しいインタープリタが選択されていない場合は、「[VS Codeで特定の仮想環境を使う](#vs-codeで特定の仮想環境を使う)」の欄の記述に従って、選択を行ってください。
 
 ![select_base_interpreter.PNG](img/select_base_interpreter.png)
 
