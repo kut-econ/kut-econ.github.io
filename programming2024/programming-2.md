@@ -885,7 +885,7 @@ Macの場合は`which R`になります。このPathを、上記の3つの設定
 `myenv`環境にこれらをインストールする場合は、`myenv`を`activate`してから、次のように入力します。
 
 ```cmd
-conda install -c anaconda m2w64-gcc
+conda install m2w64-gcc
 conda install -c anaconda nasm
 conda install -c conda-forge make
 ```
