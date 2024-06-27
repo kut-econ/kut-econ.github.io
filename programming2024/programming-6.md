@@ -220,7 +220,7 @@ knock, knock, knock, knock, knock, knock, knock, knock, knock, knock,
 
 ### 練習1
 
-文字列を1文字ずつ処理する練習です。文字列"Hello, World!"を一文字ずつ画面に印字し、'l'の後でのみ改行してするPythonコードを作成しなさい。出力は以下のようになります。
+文字列を1文字ずつ処理する練習です。文字列"Hello, World!"を一文字ずつ画面に印字し、'l'の後でのみ改行して出力するPythonコードを作成しなさい。出力は以下のようになります。
 
 ```bash
 # 出力
