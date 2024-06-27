@@ -1084,9 +1084,10 @@ for i in range(1,1000):
 
 ## 参考書
 
-- [『High Performance Python: Practical Performant Programming for Humans』](https://www.amazon.co.jp/High-Performance-Python-Performant-Programming/dp/1492055026)(M. Gorelick, I. Ozsvald著) (2020) O'Reilly. ISBN-13 : 978-1492055020.
+1. [『High Performance Python: Practical Performant Programming for Humans』](https://www.amazon.co.jp/High-Performance-Python-Performant-Programming/dp/1492055026)(M. Gorelick, I. Ozsvald著) (2020) O'Reilly. ISBN-13 : 978-1492055020.
+2. [ハイパフォーマンスPython第2版](https://www.amazon.co.jp/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9Python-%E7%AC%AC2%E7%89%88-Micha-Gorelick/dp/4873119901/ref=monarch_sidesheet)(M. Gorelick, I. Ozsvald著, 中山光樹(訳)) (2020) O'Reilly. ISBN-13: 978-4873119908.
 
-上記参考書はリストの挙動について詳しいです。
+上記参考書はリストや辞書の挙動について詳しいです(2は1の翻訳)。中〜上級者向け。
 
 <!--
 ## 宿題(ホームワーク)
