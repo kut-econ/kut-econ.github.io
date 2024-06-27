@@ -241,7 +241,7 @@ core.editor=code --wait
 
 ### 鍵の作成
 
-githubはhttpsとsshという２つの方法で接続できますが、ここではssh接続を解説することにします。まず、git bashのコンソールで、次のように入力してください。注意: `kouka.taro@*****.ac.jp`は、**Githubに登録したあなたの真のEmailアドレス**に設定します。
+githubはhttpsとsshという２つの方法で接続できますが、ここではssh接続を解説することにします。まず、git bashのコンソールで、次のように入力してください。注意: `kouka.taro@*****.ac.jp`は、**Githubに登録したあなたの真のEmailアドレス**に設定します。オプション`-C`は**大文字**なので注意。
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "kouka.taro@*****.ac.jp"
