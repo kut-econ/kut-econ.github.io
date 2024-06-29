@@ -1102,7 +1102,7 @@ for i in range(1,100):
 
 ```python
 i = 1
-while not i > 100:
+while not i >= 100:
     if not i % 3 == 0:
         print(i)
     i += 1
@@ -1112,7 +1112,7 @@ while not i > 100:
 
 ```python
 i = 1
-while i <= 100:
+while i < 100:
     if i % 3 != 0:
         print(i)
     i += 1
