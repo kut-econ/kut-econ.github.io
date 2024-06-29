@@ -1086,6 +1086,15 @@ for i in range(1,100):
         print(i)
 ```
 
+条件式`A and B`の値は、条件式`A`、`B`の値に応じて次のように決まります。
+
+|A|B|A and B|
+|--|--|--|
+|True|True|True|
+|True|False|False|
+|False|True|False|
+|False|False|False|
+
 ### or
 
 `or`演算子は日本語の「または」に相当し、`条件式A or 条件式B`は条件式Aと条件式Bのうち少なくともどちらか一方が`True`であれば`True`になるような条件式を表します。たとえば、次のコードは、100未満の自然数のうち、2の倍数と3の倍数を全て印字します。
@@ -1095,6 +1104,15 @@ for i in range(1,100):
     if i % 2 == 0 or i % 3 == 0:
         print(i)
 ```
+
+条件式`A or B`の値は、条件式`A`、`B`の値に応じて次のように決まります。
+
+|A|B|A or B|
+|--|--|--|
+|True|True|True|
+|True|False|True|
+|False|True|True|
+|False|False|False|
 
 ### not
 
