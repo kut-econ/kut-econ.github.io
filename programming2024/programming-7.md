@@ -525,8 +525,8 @@ c
 |`x.difference(y)`|`-`|xとyの差集合|
 |`x.intersection(y)`|`&`|xとyの積集合|
 |`x.union(y)`|\||xとyの和集合|
-|`x.issubset(y)`|`<`|xがyの部分集合ならTrue|
-|`x.issuperset(y)`|`>`|yがxの部分集合ならTrue|
+|`x.issubset(y)`|`<=`|xがyの部分集合ならTrue|
+|`x.issuperset(y)`|`>=`|yがxの部分集合ならTrue|
 
 たとえば、和集合はunionメソッドもしくは`|`演算子で作成できます。
 
