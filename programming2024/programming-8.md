@@ -1257,36 +1257,3 @@ Symbols in g:
 1. [『はじめてのPython』](https://www.amazon.co.jp/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AEPython-%E7%AC%AC3%E7%89%88-Mark-Lutz/dp/4873113938/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AEPython&qid=1622042001&sr=8-1)(Mark Lutz著、夏目 大 訳)(2009) オライリージャパン(第3版) ISBN-13: 978-4873113937.
 2. [『CPython Internals: Your Guide to The Python 3 Interpreter』](https://www.amazon.co.jp/CPython-Internals-Guide-Python-Interpreter/dp/1775093344/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=cpython+internals&qid=1622041957&sr=8-1)(A. Shaw, The real python.com tutorial team)(2021) Real Python. ISBN-13: 978-1775093343.
 3. [Pythonリファレンスマニュアル(symtable)](https://docs.python.org/ja/3/library/symtable.html)
-
-## 宿題(ホームワーク)
-
-1. 本編では、関数の機能のうち、ほんの一部しか紹介できませんでした。教科書のセクション8を良く読んで、特に関数の引数の引数の記法にどんなものがあるか概観しておいてください。
-2. グローバル変数`__builtins__`は、現在のモジュールが`import`で他のプログラムから読み込まれている場合、本編の説明とは少しだけ異なるものになっています。どうなっているのか、研究してみてください。
-3. `main`モジュールにおいて、変数`__builtins__`を`del`によって削除すると何が起こるでしょうか。調べて見てください。
-4. 階乗を計算する再帰関数において、関数内側で使われている記号`f`はグローバル名前空間を参照していることを`f`の記号表と`inspect_tbl`によって確かめなさい。
-5. 次のコードにおいて、関数`g`のブロックでは一見変数`x`は一切**使われていない**ように見えます。それにも関わらず、`g`の記号表に記号`x`がエントリーしていることを`inspect_tbl`関数を使って確かめなさい。また、その理由を考察しなさい。(もしこのエントリーがなければ、どんな不都合が起きるか？)
-
-    ```python
-    # 
-    def f():
-        x = 1
-        def g():
-            def h():
-                y = x
-    ```
-
-6. 上記のコードで、`h`の記号表を`inspect_tbl`関数で精査し、`x`は`is_global`と`is_local`の両方でFalseであることを確かめなさい(つまりグローバル変数ではないが、ここでは定義されていない)。`g`の記号表でも同じことを確かめなさい。
-7. 上記のコードを次のようにわずかに変更すると、`g`の記号表から`x`が無くなることを確かめなさい。またその理由を考察しなさい。
-
-    ```python
-    # 
-    def f():
-        x = 1
-        def g():
-            def h():
-                y = 1
-    ```
-
-## 課題(アサインメント)
-
-課題5の招待リンクと詳細をMoodleに掲載します。
