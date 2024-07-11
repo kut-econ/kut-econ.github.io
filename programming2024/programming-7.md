@@ -561,19 +561,3 @@ c
 
 - [『High Performance Python: Practical Performant Programming for Humans』](https://www.amazon.co.jp/High-Performance-Python-Performant-Programming/dp/1492055026)(M. Gorelick, I. Ozsvald著) (2020) O'Reilly. ISBN-13 : 978-1492055020.
 - [『CPython Internals: Your Guide to The Python 3 Interpreter』](https://www.amazon.co.jp/CPython-Internals-Guide-Python-Interpreter/dp/1775093344/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=CPython+internals&qid=1622045115&sr=8-1)(A. Shaw, The real python.com tutorial team)(2021) Real Python. ISBN-13: 978-1775093343.
-
-## 宿題(ホームワーク)
-
-1. 本編では、辞書と集合のごく一部の機能しか紹介できませんでした。教科書のセクション6.2と6.3を良く読んで、知識をしっかりと補っておいてください。
-2. 教科書のセクション3.5を読み、`&`以外のビット演算について学んでください。たとえば、次のビットシフト代入は、`x`が整数のとき、`x`を`2**n`倍することを確かめてください。
-
-    ```python
-    x <<= n
-    ```
-
-3. IPアドレスが1バイト整数の4つ組であることを確認してください。**サブネットマスク**とは何を意味しているのか、考察してみてください。
-4. 空辞書の作り方には、`{}`と`dict()`の二通りあります。後者の占有メモリは本講義で説明した理論で説明できますが、前者の占有メモリは後者よりも100バイト以上少ないことを確かめてください。どうやらこれらは違う物のようです。`{}`がどんなものなのか想像してみてください(正確な答えは筆者も持ち合わせていません)。
-
-## 課題(アサインメント)
-
-課題4の招待リンクと詳細をMoodleに掲載します。
