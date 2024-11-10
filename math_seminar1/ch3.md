@@ -68,7 +68,7 @@ alias mv="mv -i"
 
 Awesome Emacs Keymapエクステンションをインストールすると、Emacsキーバインドが使用可能になります。Emacsキーバインドとは、Emacsというテキストエディタで用いられているキーバインドであり、これをマスターすれば、マウスを使わずに文書編集が可能です。超時短になりますので、必ずマスターするようにしましょう。
 
-Emacsキーバインドの詳細は[プログラミングの資料](../programming2023/programming-2.md#emacsキーバインディング)をご覧ください。
+Emacsキーバインドの詳細は[プログラミングの資料](../programming2024/programming-2.md#emacsキーバインディング)をご覧ください。
 
 ためしに、`/proc/cpuinfo`などのファイルをディレクトリ`seminar1`にコピーしてVS Codeで`seminar1`を開いてください。コピーしてきたファイル`cpuinfo`を開いて、慣れるまでキーバインドの挙動を試してみましょう。
 
