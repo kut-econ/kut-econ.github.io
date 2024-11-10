@@ -22,11 +22,11 @@ $ code seminar1 &
 
 ## VS Codeのショートカット
 
-[プログラミングの資料](../programming2023/programming-2.md#vs-code-ショートカット)を参照してください。
+[プログラミングの資料](../programming2024/programming-2.md#vs-code-ショートカット)を参照してください。
 
 ## プロキシの設定
 
-[プログラミングの資料](../programming2023/programming-2.md#プロキシの設定vs-code)を参照してください。
+[プログラミングの資料](../programming2024/programming-2.md#プロキシの設定vs-code)を参照してください。
 
 ## 各種エクステンションのインストール
 
