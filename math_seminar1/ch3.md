@@ -106,6 +106,8 @@ $ gio open kadai2.pdf
 $ evince kadai2.pdf
 ```
 
+Markdownの本格的な文法については、[プログラミングの資料](https://kut-econ.github.io/programming2024/programming-2.html#マークダウン入門)を参照してください。
+
 ## 課題の提出
 
 文書をPDF形式に出力できたら、Webmailを使って提出してください。
