@@ -39,7 +39,8 @@ $ code seminar1 &
 + Path Intellisense
 + Markdown All in One
 + markdownlint
-+ Markdown PDF
++ Markdown Converter
++ vscode-pdf
 
 ## コマンドラインエイリアスの設定
 
@@ -54,7 +55,7 @@ $ cd
 $ code . &
 ```
 
-VS Code上で、`.bash_aliases`というファイルをホームディレクトリに作成し、次のように記述してください。
+VS Code上で、`.bashrc`というファイルをホームディレクトリに作成し、次のように記述してください。
 
 ```bash
 alias rm="rm -i"
