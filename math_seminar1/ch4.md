@@ -69,4 +69,4 @@ LaTeXでどのように複雑な数式を作るかは、次回詳しく学ぶこ
 
 overleafはインターネット上でLaTeX文書を作成、共有、コンパイルすることができる非常に便利なサービスです。overleafの設定等については[矢内先生の資料](https://yukiyanai.github.io/mathseminar1/overleaf.html)に詳しいです。無料アカウントでも、一人で文書を作成する分にはほとんど不自由ありませんので、早速アカウントを作成しましょう。
 
-overleafはデフォルトの状態では日本語を処理することができません。日本語を処理する方法については、[こちら](https://zenn.dev/daisuke23/articles/overleaf-japanese)のサイトが参考になります。
+overleafはデフォルトの状態では日本語を処理することができません。日本語を処理する方法には複数ありますが、[こちら](https://zenn.dev/daisuke23/articles/overleaf-japanese)のサイトが参考になります。また、矢内先生の資料においても別の方法が解説されています。
