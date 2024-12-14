@@ -70,3 +70,16 @@ LaTeXでどのように複雑な数式を作るかは、次回詳しく学ぶこ
 overleafはインターネット上でLaTeX文書を作成、共有、コンパイルすることができる非常に便利なサービスです。overleafの設定等については[矢内先生の資料](https://yukiyanai.github.io/mathseminar1/overleaf.html)に詳しいです。無料アカウントでも、一人で文書を作成する分にはほとんど不自由ありませんので、早速アカウントを作成しましょう。
 
 overleafはデフォルトの状態では日本語を処理することができません。日本語を処理する方法には複数ありますが、[こちら](https://zenn.dev/daisuke23/articles/overleaf-japanese)のサイトが参考になります。また、矢内先生の資料においても別の方法が解説されています。
+
+プロジェクトの中に、`latexmkrc`という新規ファイルを作り、その中に次のように記述してください。
+
+```latex
+$latex = 'platex';
+$bibtex = 'pbibtex';
+$dvipdf = 'dvipdfmx %O -o %D %S';
+$makeindex = 'mendex %O -o %D %S';
+```
+
+次にメニューから、コンパイラの設定を`LaTeX`にしてください。あとは`main.tex`ファイルの`documentclass`を`jarticle`に書き換えれば、日本語が使えるようになります。
+
+
