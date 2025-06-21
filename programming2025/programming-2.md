@@ -847,7 +847,7 @@ echo %HOME%
 
 ### Pythonのバージョン3.8をmyenv環境にインストールするには?
 
-myenv環境をactivateしてから、次を実行します
+myenv環境をactivateしてから、次を実行します(以下のコマンドは、VSCode上で対話的にpythonを実行するためのパッケージipykernelも同時にインストールします)。
 
 ```cmd
 conda install python=3.8 ipykernel
