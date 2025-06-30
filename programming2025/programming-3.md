@@ -606,7 +606,7 @@ git pull
 |`git add filename`|ファイルfilenameの変更をステージ|
 |`git commit -m "Message"`|メッセージ"Message"をつけてコミット|
 |`git commit`|コミット(メッセージはエディタで入力)|
-|`git --set-upstream-to=origin/master`|ローカルと同期させるリモートを設定|
+|`git branch --set-upstream-to=origin/master`|ローカルと同期させるリモートを設定|
 |`git push`|リモートをローカルに同期|
 |`git pull`|ローカルをリモートに同期|
 |`git reset`|ステージングエリアをコミットせずに破棄|
