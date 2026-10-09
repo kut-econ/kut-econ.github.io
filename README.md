@@ -10,3 +10,4 @@ KUT経・マネにおけるプログラミング系授業（小林によるも�
 + [プログラミング(2024年度, 3年生向け)](./programming2024/index.md)
 + [プログラミング(2025年度, 3年生向け)](./programming2025/index.md)
 + [数理マネジメントセミナーI, 1年生向け](./math_seminar1/index.md)
++ [数理マネジメントセミナーI, 1年生向け(2027-)](./math_seminar1_byod/index.md)
