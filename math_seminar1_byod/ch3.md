@@ -55,6 +55,14 @@ $ cd
 $ code . &
 ```
 
+VS Code上で、`.bash_profile`というファイルをホームディレクトリに作成し、次のように記述してください。
+
+```bash
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+```
+
 VS Code上で、`.bashrc`というファイルをホームディレクトリに作成し、次のように記述してください。
 
 ```bash
